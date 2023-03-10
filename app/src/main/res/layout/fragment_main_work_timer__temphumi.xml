@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity_Work_Timer_TempHumi">
+
+    <!-- 온도 !-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:fontFamily="@font/main_font"
+                android:text="온도 (°C)"
+                android:textColor="#000000"
+                android:textSize="@dimen/size_15dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tempMinPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/size_15dp"
+                android:fontFamily="@font/main_font"
+                android:text="+"
+                android:textColor="#003C85"
+                android:textSize="@dimen/size_25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tempMinMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:fontFamily="@font/main_font"
+                android:text="-"
+                android:textColor="#850000"
+                android:textSize="@dimen/size_25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tempMinT"
+                android:layout_width="@dimen/size_50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/main_font"
+                android:gravity="center"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/size_20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/size_10dp"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:fontFamily="@font/main_font"
+                android:text="~"
+                android:textColor="#000000"
+                android:textSize="@dimen/size_20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tempMaxT"
+                android:layout_width="@dimen/size_50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/main_font"
+                android:gravity="center"
+                android:text="60"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/size_20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tempMaxPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_10dp"
+                android:fontFamily="@font/main_font"
+                android:text="+"
+                android:textColor="#003C85"
+                android:textSize="@dimen/size_25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tempMaxMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_15dp"
+                android:fontFamily="@font/main_font"
+                android:text="-"
+                android:textColor="#850000"
+                android:textSize="@dimen/size_25dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/tempSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginRight="@dimen/size_20dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- 구분선 !-->
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/size_5dp"
+        android:layout_marginRight="@dimen/size_5dp"
+        android:background="#BDBDBD" />
+
+    <!-- 습도 !-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:fontFamily="@font/main_font"
+                android:text="습도 (%)"
+                android:textColor="#000000"
+                android:textSize="@dimen/size_15dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/humiMinPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/size_15dp"
+                android:fontFamily="@font/main_font"
+                android:text="+"
+                android:textColor="#003C85"
+                android:textSize="@dimen/size_25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/humiMinMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:fontFamily="@font/main_font"
+                android:text="-"
+                android:textColor="#850000"
+                android:textSize="@dimen/size_25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/humiMinT"
+                android:layout_width="@dimen/size_50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/main_font"
+                android:gravity="center"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/size_20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/size_10dp"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:fontFamily="@font/main_font"
+                android:text="~"
+                android:textColor="#000000"
+                android:textSize="@dimen/size_20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/humiMaxT"
+                android:layout_width="@dimen/size_50dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/main_font"
+                android:gravity="center"
+                android:text="100"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/size_20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/humiMaxPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_10dp"
+                android:fontFamily="@font/main_font"
+                android:text="+"
+                android:textColor="#003C85"
+                android:textSize="@dimen/size_25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/humiMaxMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_15dp"
+                android:fontFamily="@font/main_font"
+                android:text="-"
+                android:textColor="#850000"
+                android:textSize="@dimen/size_25dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/humiSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginRight="@dimen/size_20dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

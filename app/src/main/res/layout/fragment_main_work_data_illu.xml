@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity_Work_Data_Illu">
+
+    <RelativeLayout
+        android:id="@+id/functionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_5dp">
+
+        <ImageView
+            android:id="@+id/button_calendar"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:src="@drawable/main_work_data_calendar_icon" />
+
+        <ImageView
+            android:id="@+id/button_last"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_marginLeft="@dimen/size_5dp"
+            android:layout_toRightOf="@+id/button_calendar"
+            android:src="@drawable/main_work_data_last_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/size_5dp"
+            android:layout_toLeftOf="@+id/date"
+            android:fontFamily="@font/main_font"
+            android:text="데이터 수집일:"
+            android:textColor="#000000"
+            android:textSize="@dimen/size_12dp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/main_font"
+            android:text="0000-00-00"
+            android:textColor="#000000"
+            android:textSize="@dimen/size_12dp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/functionLayout"
+        android:orientation="horizontal">
+
+        <!-- 그래프 !-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:layout_marginRight="@dimen/size_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_work_data_webview_layout">
+
+            <WebView
+                android:id="@+id/graph"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size_5dp" />
+        </LinearLayout>
+
+        <!-- 표 !-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size_5dp"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_work_data_table_layout">
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#84A56C"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/main_font"
+                        android:padding="@dimen/size_3dp"
+                        android:text="시간"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/size_13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/main_font"
+                        android:padding="@dimen/size_3dp"
+                        android:text="조도(Lx)"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/size_13dp"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</RelativeLayout>

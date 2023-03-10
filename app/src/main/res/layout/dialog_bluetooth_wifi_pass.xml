@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/size_400dp"
+    android:layout_height="@dimen/size_200dp"
+    android:background="@drawable/dialog_layout"
+    tools:context=".BluetoothActivity_WifiPass">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50dp">
+
+        <ImageView
+            android:id="@+id/button_back"
+            android:layout_width="@dimen/size_20dp"
+            android:layout_height="@dimen/size_20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:src="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/wifiName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/main_font"
+            android:text="olleh_WiFi_A2C5"
+            android:textColor="#000000"
+            android:textSize="@dimen/size_14dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@+id/topLayout"
+        android:background="#646464" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/size_20dp"
+            android:layout_marginRight="@dimen/size_20dp"
+            android:background="@drawable/dialog_edit_layout"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_5dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginEnd="@dimen/size_5dp"
+                android:layout_marginRight="@dimen/size_5dp"
+                android:layout_marginBottom="@dimen/size_5dp"
+                android:layout_toLeftOf="@+id/editVisible"
+                android:background="@drawable/edit_layout"
+                android:fontFamily="@font/main_font"
+                android:hint="비밀번호를 입력해주세요"
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textColorHint="#A2A2A2"
+                android:textSize="@dimen/size_14dp" />
+
+            <ImageView
+                android:id="@+id/editVisible"
+                android:layout_width="@dimen/size_25dp"
+                android:layout_height="@dimen/size_25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/size_5dp"
+                android:layout_toLeftOf="@+id/editNull" />
+
+            <ImageView
+                android:id="@+id/editNull"
+                android:layout_width="@dimen/size_25dp"
+                android:layout_height="@dimen/size_25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/size_20dp"
+            android:layout_marginBottom="@dimen/size_15dp">
+
+            <TextView
+                android:id="@+id/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/main_font"
+                android:text="취소"
+                android:textColor="#000000"
+                android:textSize="@dimen/size_13dp" />
+
+            <TextView
+                android:id="@+id/button_apply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_30dp"
+                android:fontFamily="@font/main_font"
+                android:text="적용"
+                android:textColor="#000000"
+                android:textSize="@dimen/size_13dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

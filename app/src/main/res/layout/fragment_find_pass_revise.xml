@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#84A56C"
+    tools:context=".FindActivity_Pass_Revise">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/size_40dp"
+        android:layout_marginTop="@dimen/size_20dp"
+        android:layout_marginRight="@dimen/size_40dp"
+        android:layout_marginBottom="@dimen/size_20dp"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- 비밀번호 입력 !-->
+                <TextView
+                    android:id="@+id/title_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/main_font"
+                    android:text="변경할 비밀번호"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/size_20dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_50dp"
+                    android:background="@drawable/sign_edit_linearlayout"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edit_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/size_5dp"
+                        android:layout_marginRight="@dimen/size_5dp"
+                        android:layout_marginBottom="@dimen/size_5dp"
+                        android:layout_toLeftOf="@+id/editVisable_pass"
+                        android:background="@drawable/sign_layout"
+                        android:fontFamily="@font/main_font"
+                        android:hint="30자 내로 입력해 주세요"
+                        android:inputType="textPassword"
+                        android:maxLength="30"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/size_18dp" />
+
+                    <android.widget.Button
+                        android:id="@+id/editVisable_pass"
+                        android:layout_width="@dimen/size_30dp"
+                        android:layout_height="@dimen/size_30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/size_5dp"
+                        android:layout_toLeftOf="@+id/editNull_pass"
+                        android:background="@android:color/transparent" />
+
+                    <android.widget.Button
+                        android:id="@+id/editNull_pass"
+                        android:layout_width="@dimen/size_30dp"
+                        android:layout_height="@dimen/size_30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/editWrong_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/main_font"
+                    android:text=""
+                    android:textColor="#850000"
+                    android:textSize="@dimen/size_12dp" />
+
+                <!-- 비밀번호 확인 !-->
+                <TextView
+                    android:id="@+id/title_pass2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/main_font"
+                    android:text="비밀번호 확인"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/size_20dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_50dp"
+                    android:background="@drawable/sign_edit_linearlayout"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edit_pass2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/size_5dp"
+                        android:layout_marginRight="@dimen/size_5dp"
+                        android:layout_marginBottom="@dimen/size_5dp"
+                        android:layout_toLeftOf="@+id/editVisable_pass2"
+                        android:background="@drawable/sign_layout"
+                        android:fontFamily="@font/main_font"
+                        android:hint="다시 한번 입력해 주세요"
+                        android:inputType="textPassword"
+                        android:maxLength="30"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/size_18dp" />
+
+                    <android.widget.Button
+                        android:id="@+id/editVisable_pass2"
+                        android:layout_width="@dimen/size_30dp"
+                        android:layout_height="@dimen/size_30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/size_5dp"
+                        android:layout_toLeftOf="@+id/editNull_pass2"
+                        android:background="@android:color/transparent" />
+
+                    <android.widget.Button
+                        android:id="@+id/editNull_pass2"
+                        android:layout_width="@dimen/size_30dp"
+                        android:layout_height="@dimen/size_30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/editWrong_pass2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/main_font"
+                    android:text=""
+                    android:textColor="#850000"
+                    android:textSize="@dimen/size_12dp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_60dp"
+            android:backgroundTint="#6A9562"
+            android:fontFamily="@font/main_font"
+            android:text="변경하기"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/size_15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </LinearLayout>
+</FrameLayout>

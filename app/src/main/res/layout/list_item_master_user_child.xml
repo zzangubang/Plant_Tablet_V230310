@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50dp">
+
+        <TextView
+            android:id="@+id/model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_5dp"
+            android:fontFamily="@font/main_font"
+            android:text="AJPLANTs"
+            android:textColor="#000000"
+            android:textSize="@dimen/size_13dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_5dp"
+            android:layout_toLeftOf="@+id/addDate"
+            android:fontFamily="@font/main_font"
+            android:text="등록 날짜:"
+            android:textColor="#646464"
+            android:textSize="@dimen/size_12dp" />
+
+        <TextView
+            android:id="@+id/addDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:fontFamily="@font/main_font"
+            android:text="0000-00-00"
+            android:textColor="#646464"
+            android:textSize="@dimen/size_12dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

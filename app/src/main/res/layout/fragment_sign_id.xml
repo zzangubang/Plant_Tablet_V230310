@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#84A56C"
+    tools:context=".SignActivity_ID">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/size_40dp"
+        android:layout_marginTop="@dimen/size_20dp"
+        android:layout_marginRight="@dimen/size_40dp"
+        android:layout_marginBottom="@dimen/size_20dp"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/main_font"
+                    android:text="사용하실 아이디를 입력해주세요"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/size_20dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_50dp"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:background="@drawable/sign_edit_linearlayout"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edit_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/size_5dp"
+                        android:layout_marginRight="@dimen/size_5dp"
+                        android:layout_marginBottom="@dimen/size_5dp"
+                        android:layout_toLeftOf="@+id/editNull_id"
+                        android:background="@drawable/sign_layout"
+                        android:fontFamily="@font/main_font"
+                        android:hint="아이디를 입력해주세요(1~20자)"
+                        android:inputType="textVisiblePassword"
+                        android:maxLength="20"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/size_18dp" />
+
+                    <android.widget.Button
+                        android:id="@+id/editNull_id"
+                        android:layout_width="@dimen/size_30dp"
+                        android:layout_height="@dimen/size_30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/editWrong_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/main_font"
+                    android:text=""
+                    android:textColor="#850000"
+                    android:textSize="@dimen/size_12dp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_60dp"
+            android:backgroundTint="#6A9562"
+            android:fontFamily="@font/main_font"
+            android:text="아이디 중복 확인"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/size_15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </LinearLayout>
+
+</FrameLayout>

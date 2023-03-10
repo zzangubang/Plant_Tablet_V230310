@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#84A56C"
+    tools:context=".SignActivity_Fin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_fin"
+                    android:layout_width="@dimen/size_100dp"
+                    android:layout_height="@dimen/size_100dp"
+                    android:src="@drawable/sign_fin" />
+
+                <TextView
+                    android:id="@+id/titleB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_20dp"
+                    android:fontFamily="@font/main_font"
+                    android:text="회원가입 완료"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/size_25dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/main_font"
+                    android:text="AJPLANTs 서비스에 회원가입해주셔서 감사합니다.\n\n귀하는 관리자의 승인을 통해 서비스 이용이 가능합니다.\n관리자의 승인은 최소 1일 ~ 3일(주말 제외)이 소요됩니다."
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/size_16dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+</FrameLayout>

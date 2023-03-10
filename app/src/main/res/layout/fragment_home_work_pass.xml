@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity_Work_Pass">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_10dp"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:fontFamily="@font/main_font"
+        android:text="현재 비밀번호"
+        android:textColor="#000000"
+        android:textSize="@dimen/size_15dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/size_15dp"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:layout_marginRight="@dimen/size_15dp"
+        android:background="@drawable/dialog_edit_layout"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_5dp"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:layout_marginEnd="@dimen/size_5dp"
+            android:layout_marginRight="@dimen/size_7dp"
+            android:layout_marginBottom="@dimen/size_5dp"
+            android:layout_toLeftOf="@+id/editNull"
+            android:background="@drawable/edit_layout"
+            android:fontFamily="@font/main_font"
+            android:hint="현재 비밀번호를 입력해주세요"
+            android:inputType="textPassword"
+            android:maxLength="30"
+            android:textColor="#000000"
+            android:textColorHint="#A2A2A2"
+            android:textSize="@dimen/size_14dp" />
+
+        <ImageView
+            android:id="@+id/editNull"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_10dp"
+        android:layout_marginTop="@dimen/size_40dp"
+        android:fontFamily="@font/main_font"
+        android:text="변경할 비밀번호"
+        android:textColor="#000000"
+        android:textSize="@dimen/size_15dp"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/size_15dp"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:layout_marginRight="@dimen/size_15dp"
+        android:background="@drawable/dialog_edit_layout"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_5dp"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:layout_marginEnd="@dimen/size_5dp"
+            android:layout_marginRight="@dimen/size_7dp"
+            android:layout_marginBottom="@dimen/size_5dp"
+            android:layout_toLeftOf="@+id/editVisibleChange"
+            android:background="@drawable/edit_layout"
+            android:fontFamily="@font/main_font"
+            android:hint="변경하실 비밀번호를 입력해주세요"
+            android:inputType="textPassword"
+            android:maxLength="30"
+            android:textColor="#000000"
+            android:textColorHint="#A2A2A2"
+            android:textSize="@dimen/size_14dp" />
+
+        <ImageView
+            android:id="@+id/editVisibleChange"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_5dp"
+            android:layout_toLeftOf="@+id/editNullChange" />
+
+        <ImageView
+            android:id="@+id/editNullChange"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/size_15dp"
+        android:layout_marginTop="@dimen/size_20dp"
+        android:layout_marginRight="@dimen/size_15dp"
+        android:background="@drawable/dialog_edit_layout"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editChange2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_5dp"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:layout_marginEnd="@dimen/size_5dp"
+            android:layout_marginRight="@dimen/size_7dp"
+            android:layout_marginBottom="@dimen/size_5dp"
+            android:layout_toLeftOf="@+id/editVisibleChange2"
+            android:background="@drawable/edit_layout"
+            android:fontFamily="@font/main_font"
+            android:hint="한 번 더 입력해주세요"
+            android:inputType="textPassword"
+            android:maxLength="30"
+            android:textColor="#000000"
+            android:textColorHint="#A2A2A2"
+            android:textSize="@dimen/size_14dp" />
+
+
+        <ImageView
+            android:id="@+id/editVisibleChange2"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_5dp"
+            android:layout_toLeftOf="@+id/editNullChange2" />
+
+        <ImageView
+            android:id="@+id/editNullChange2"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/wrongT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_20dp"
+        android:layout_marginTop="@dimen/size_7dp"
+        android:fontFamily="@font/main_font"
+        android:text=""
+        android:textSize="@dimen/size_11dp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <android.widget.Button
+        android:id="@+id/button_change"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/size_10dp"
+        android:layout_marginRight="@dimen/size_10dp"
+        android:background="@drawable/button_selector"
+        android:fontFamily="@font/main_font"
+        android:text="변경하기"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/size_15dp"
+        android:textStyle="bold" />
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50dp">
+
+        <ImageView
+            android:id="@+id/radio"
+            android:layout_width="@dimen/size_20dp"
+            android:layout_height="@dimen/size_20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_5dp"
+            android:src="@drawable/radio" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50dp"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:layout_toRightOf="@+id/radio"
+            android:background="@drawable/model_list_layout_selector">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/main_font"
+                android:text="AJ"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/size_13dp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

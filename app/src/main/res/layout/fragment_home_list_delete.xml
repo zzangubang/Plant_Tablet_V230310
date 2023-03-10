@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity_ListDelete">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/size_10dp"
+        android:layout_marginRight="@dimen/size_10dp"
+        android:orientation="vertical">
+        <!-- 모델 삭제 !-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40dp">
+
+            <ImageView
+                android:id="@+id/button_back"
+                android:layout_width="@dimen/size_20dp"
+                android:layout_height="@dimen/size_20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/size_5dp"
+                android:layout_toRightOf="@+id/button_back"
+                android:fontFamily="@font/main_font"
+                android:text="편집"
+                android:textColor="#000000"
+                android:textSize="@dimen/size_14dp" />
+
+            <ImageView
+                android:id="@+id/button_delete"
+                android:layout_width="@dimen/size_25dp"
+                android:layout_height="@dimen/size_25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/home_delete_icon" />
+        </RelativeLayout>
+
+        <!-- 리스트 !-->
+        <ListView
+            android:id="@+id/plantList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:layout_marginBottom="@dimen/size_10dp"
+            android:divider="#00000000"
+            android:dividerHeight="@dimen/size_10dp"
+            android:scrollbars="none"/>
+    </LinearLayout>
+
+</FrameLayout>

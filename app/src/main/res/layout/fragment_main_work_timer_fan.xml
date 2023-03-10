@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity_Work_Timer_Fan">
+
+    <!-- 가동 시작 시간 !-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:fontFamily="@font/main_font"
+                android:text="가동 시작 시간"
+                android:textColor="#000000"
+                android:textSize="@dimen/size_15dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size_20dp"
+            android:layout_marginRight="@dimen/size_20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <NumberPicker
+                android:id="@+id/fanWF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size_5dp"
+                android:layout_weight="1"
+                android:theme="@style/NumberPicker" />
+
+            <NumberPicker
+                android:id="@+id/fanWH"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size_5dp"
+                android:layout_weight="1"
+                android:theme="@style/NumberPicker" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/main_font"
+                android:text=":"
+                android:textColor="#000000"
+                android:textSize="@dimen/size_20dp"
+                android:textStyle="bold" />
+
+            <NumberPicker
+                android:id="@+id/fanWM"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size_5dp"
+                android:layout_weight="1"
+                android:theme="@style/NumberPicker" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 구분선 !-->
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/size_5dp"
+        android:layout_marginRight="@dimen/size_5dp"
+        android:background="#BDBDBD" />
+
+    <!-- 가동 중단 시간 !-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:fontFamily="@font/main_font"
+                android:text="가동 시작 시간"
+                android:textColor="#000000"
+                android:textSize="@dimen/size_15dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size_20dp"
+            android:layout_marginRight="@dimen/size_20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <NumberPicker
+                android:id="@+id/fanSF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size_5dp"
+                android:layout_weight="1"
+                android:theme="@style/NumberPicker" />
+
+            <NumberPicker
+                android:id="@+id/fanSH"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size_5dp"
+                android:layout_weight="1"
+                android:theme="@style/NumberPicker" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/main_font"
+                android:text=":"
+                android:textColor="#000000"
+                android:textSize="@dimen/size_20dp"
+                android:textStyle="bold" />
+
+            <NumberPicker
+                android:id="@+id/fanSM"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size_5dp"
+                android:layout_weight="1"
+                android:theme="@style/NumberPicker" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

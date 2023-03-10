@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_80dp">
+
+        <ImageView
+            android:id="@+id/image_profile"
+            android:layout_width="@dimen/size_45dp"
+            android:layout_height="@dimen/size_45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_5dp"
+            android:src="@drawable/profile_icon" />
+
+        <LinearLayout
+            android:id="@+id/userInform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:layout_toRightOf="@+id/image_profile"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_25dp"
+                android:fontFamily="@font/main_font"
+                android:text="이수현"
+                android:textColor="#000000"
+                android:textSize="@dimen/size_15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/main_font"
+                android:text="01099908533"
+                android:textColor="#646464"
+                android:textSize="@dimen/size_11dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/size_5dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/size_5dp"
+                android:fontFamily="@font/main_font"
+                android:text="가입날짜:"
+                android:textAlignment="center"
+                android:textColor="#646464"
+                android:textSize="@dimen/size_10dp" />
+
+            <TextView
+                android:id="@+id/signDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/size_5dp"
+                android:fontFamily="@font/main_font"
+                android:text="2023.02.07"
+                android:textAlignment="center"
+                android:textColor="#646464"
+                android:textSize="@dimen/size_10dp" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/button_approve"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_15dp"
+            android:layout_toLeftOf="@+id/button_delete"
+            android:src="@drawable/approve_icon" />
+
+        <TextView
+            android:id="@+id/text_approve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:layout_toLeftOf="@+id/button_delete"
+            android:fontFamily="@font/main_font"
+            android:text=""
+            android:textColor="#646464"
+            android:textSize="@dimen/size_13dp" />
+
+        <ImageView
+            android:id="@+id/button_delete"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:src="@drawable/approve_not_icon" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

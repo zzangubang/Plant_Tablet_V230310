@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#84A56C"
+    tools:context=".SignActivity_Already">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/size_30dp"
+        android:layout_marginTop="@dimen/size_40dp"
+        android:layout_marginRight="@dimen/size_30dp"
+        android:layout_marginBottom="@dimen/size_20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_already"
+            android:layout_width="@dimen/size_100dp"
+            android:layout_height="@dimen/size_100dp"
+            android:src="@drawable/sign_already" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:fontFamily="@font/main_font"
+            android:text="입력하신 핸드폰 번호로\n등록된 아이디가 존재합니다."
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="@dimen/size_20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</FrameLayout>

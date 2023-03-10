@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity_Work_Timer">
+
+    <!-- 메뉴 (온도 및 습도, 내부팬, 전등(좌), 전등(우) !-->
+    <LinearLayout
+        android:id="@+id/menuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.widget.Button
+            android:id="@+id/button_tempHumi"
+            android:layout_width="@dimen/size_70dp"
+            android:layout_height="@dimen/size_30dp"
+            android:background="@drawable/select_on_selector"
+            android:fontFamily="@font/main_font"
+            android:text="온도 / 습도"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/size_11dp" />
+
+        <android.widget.Button
+            android:id="@+id/button_fan"
+            android:layout_width="@dimen/size_55dp"
+            android:layout_height="@dimen/size_30dp"
+            android:layout_marginLeft="@dimen/size_20dp"
+            android:background="@drawable/select_off_selector"
+            android:fontFamily="@font/main_font"
+            android:text="내부팬"
+            android:textColor="#646464"
+            android:textSize="@dimen/size_11dp" />
+
+        <android.widget.Button
+            android:id="@+id/button_ledL"
+            android:layout_width="@dimen/size_60dp"
+            android:layout_height="@dimen/size_30dp"
+            android:layout_marginLeft="@dimen/size_20dp"
+            android:background="@drawable/select_off_selector"
+            android:fontFamily="@font/main_font"
+            android:text="전등(좌)"
+            android:textColor="#646464"
+            android:textSize="@dimen/size_11dp" />
+
+        <android.widget.Button
+            android:id="@+id/button_ledR"
+            android:layout_width="@dimen/size_60dp"
+            android:layout_height="@dimen/size_30dp"
+            android:layout_marginLeft="@dimen/size_20dp"
+            android:background="@drawable/select_off_selector"
+            android:fontFamily="@font/main_font"
+            android:text="전등(우)"
+            android:textColor="#646464"
+            android:textSize="@dimen/size_11dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/infoLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:layout_height="@dimen/size_50dp"
+        android:layout_marginLeft="@dimen/size_10dp"
+        android:layout_marginRight="@dimen/size_10dp"
+        android:layout_below="@+id/menuLayout"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/valueLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_work_value_layout"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/main_font"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="@dimen/size_16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/caution"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/main_font"
+                android:text="※ 0 ~ 60°C / 0 ~ 100% 내에서 설정 가능합니다 ※"
+                android:textColor="#7A7A7A"
+                android:textSize="@dimen/size_13dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_save"
+        android:layout_below="@id/infoLayout"
+        android:layout_marginStart="@dimen/size_10dp"
+        android:layout_marginLeft="@dimen/size_10dp"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:layout_marginEnd="@dimen/size_10dp"
+        android:layout_marginRight="@dimen/size_10dp"
+        android:layout_marginBottom="@dimen/size_10dp"
+        android:background="@drawable/main_work_layout">
+
+        <FrameLayout
+            android:id="@+id/timerFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/size_5dp" />
+
+    </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/button_save"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/size_10dp"
+        android:layout_marginRight="@dimen/size_10dp"
+        android:background="@drawable/button_selector"
+        android:fontFamily="@font/main_font"
+        android:text="저장하기"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/size_15dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

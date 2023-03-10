@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/size_400dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_layout"
+    android:orientation="vertical"
+    tools:context=".MasterActivity_Menu">
+
+    <!-- 상단 바 !-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50dp"
+        android:layout_margin="@dimen/size_10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/main_font"
+            android:text="AJPLANTs"
+            android:textColor="#6A9562"
+            android:textSize="@dimen/size_20dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_80dp" />
+
+    <!-- 회원가입 승인 !-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#A6A6A6" />
+
+    <LinearLayout
+        android:id="@+id/button_approve"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_55dp"
+        android:background="@drawable/menu_button_selector"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/size_15dp"
+            android:src="@drawable/master_menu_approve_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/size_15dp"
+            android:fontFamily="@font/main_font"
+            android:text="회원가입 승인"
+            android:textColor="#646464"
+            android:textSize="@dimen/size_13dp" />
+
+    </LinearLayout>
+
+
+    <!-- 회원 정보 !-->
+    <LinearLayout
+        android:id="@+id/button_user"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_55dp"
+        android:background="@drawable/menu_button_selector"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/size_15dp"
+            android:src="@drawable/master_menu_user_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/size_15dp"
+            android:fontFamily="@font/main_font"
+            android:text="회원 정보"
+            android:textColor="#646464"
+            android:textSize="@dimen/size_13dp" />
+
+    </LinearLayout>
+
+
+    <!-- 회원가입 승인 !-->
+    <LinearLayout
+        android:id="@+id/button_device"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_55dp"
+        android:background="@drawable/menu_button_selector"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/size_15dp"
+            android:src="@drawable/master_menu_device_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/size_15dp"
+            android:fontFamily="@font/main_font"
+            android:text="기기 정보"
+            android:textColor="#646464"
+            android:textSize="@dimen/size_13dp" />
+
+    </LinearLayout>
+
+
+    <!-- 로그아웃 !-->
+    <LinearLayout
+        android:id="@+id/button_logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_55dp"
+        android:background="@drawable/menu_button_selector"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/size_15dp"
+            android:src="@drawable/master_menu_logout_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/size_15dp"
+            android:fontFamily="@font/main_font"
+            android:text="로그아웃"
+            android:textColor="#646464"
+            android:textSize="@dimen/size_13dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#A6A6A6" />
+
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_35dp"
+        android:layout_below="@+id/footerView"
+        android:layout_margin="@dimen/size_5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/main_font"
+            android:text="Copyright 2022. Ahjoo Engineering inc. all rights reserved."
+            android:textColor="#979797"
+            android:textSize="@dimen/size_9dp" />
+
+    </LinearLayout>
+</LinearLayout>

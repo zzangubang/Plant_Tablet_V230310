@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity_Work_Timer">
+
+    <!-- 메뉴(온도, 습도, 조도) !-->
+    <LinearLayout
+        android:id="@+id/menuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_35dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.widget.Button
+            android:id="@+id/button_temp"
+            android:layout_width="@dimen/size_50dp"
+            android:layout_height="@dimen/size_30dp"
+            android:background="@drawable/select_on_selector"
+            android:fontFamily="@font/main_font"
+            android:text="온도"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/size_11dp" />
+
+        <android.widget.Button
+            android:id="@+id/button_humi"
+            android:layout_width="@dimen/size_50dp"
+            android:layout_height="@dimen/size_30dp"
+            android:layout_marginLeft="@dimen/size_35dp"
+            android:background="@drawable/select_off_selector"
+            android:fontFamily="@font/main_font"
+            android:text="습도"
+            android:textColor="#646464"
+            android:textSize="@dimen/size_11dp" />
+
+        <android.widget.Button
+            android:id="@+id/button_illu"
+            android:layout_width="@dimen/size_50dp"
+            android:layout_height="@dimen/size_30dp"
+            android:layout_marginLeft="@dimen/size_35dp"
+            android:background="@drawable/select_off_selector"
+            android:fontFamily="@font/main_font"
+            android:text="조도"
+            android:textColor="#646464"
+            android:textSize="@dimen/size_11dp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/dataFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/menuLayout"
+        android:layout_marginStart="@dimen/size_10dp"
+        android:layout_marginLeft="@dimen/size_10dp"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:layout_marginEnd="@dimen/size_10dp"
+        android:layout_marginRight="@dimen/size_10dp"
+        android:layout_marginBottom="@dimen/size_10dp" />
+
+</RelativeLayout>
