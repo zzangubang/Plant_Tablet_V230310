@@ -54,7 +54,7 @@ public class SignActivity_ID extends Fragment {
     MaterialButton btn;
     String btnState = "아이디 중복 확인";
     GetCheckID gCheckID;
-    String getCheckIDURL = "http://aj3dlab.dothome.co.kr/Test_checkID_Android.php";
+    String getCheckIDURL = "http://hosting.ajplants.com/Plant_checkID_Android.php";
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

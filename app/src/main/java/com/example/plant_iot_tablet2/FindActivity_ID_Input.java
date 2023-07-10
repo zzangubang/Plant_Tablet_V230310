@@ -58,7 +58,7 @@ public class FindActivity_ID_Input extends Fragment {
 
     // 등록된 ID 체크.
     GetID gID;
-    String getIDURL = "http://aj3dlab.dothome.co.kr/Test_checkUser_Android.php";
+    String getIDURL = "http://hosting.ajplants.com/Plant_checkUser_Android.php";
 
     Toast toast;
     String name = "", phone = "";

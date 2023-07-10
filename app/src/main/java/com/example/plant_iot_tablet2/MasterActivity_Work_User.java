@@ -33,9 +33,9 @@ public class MasterActivity_Work_User extends Fragment {
     ArrayList<ArrayList<MasterActivity_Work_User_Child_ListItem>> childList = new ArrayList<>();
 
     GetUser gUser;
-    String getUserURL = "http://aj3dlab.dothome.co.kr/Test_user_userG_Android.php";
+    String getUserURL = "http://hosting.ajplants.com/Plant_user_userG_Android.php";
     GetDevice gDevice;
-    String getDeviceURL = "http://aj3dlab.dothome.co.kr/Test_user_deviceG_Android.php";
+    String getDeviceURL = "http://hosting.ajplants.com/Plant_user_deviceG_Android.php";
 
     ProgressDialog dialog;
     // TODO: Rename parameter arguments, choose names that match

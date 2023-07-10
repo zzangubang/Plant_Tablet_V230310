@@ -35,7 +35,7 @@ public class Activity_ListRevise extends Activity {
     TextView button_cancel, button_apply;
 
     ModelRevise rModel;
-    String modelReviseURL = "http://aj3dlab.dothome.co.kr/Test_modelRevise_Android.php";
+    String modelReviseURL = "http://hosting.ajplants.com/Plant_modelRevise_Android.php";
 
     InputMethodManager imm; // 키보드.
     Toast toast;

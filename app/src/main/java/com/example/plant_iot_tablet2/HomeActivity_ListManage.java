@@ -43,7 +43,7 @@ public class HomeActivity_ListManage extends Fragment {
     Model_ListAdapter listAdapter;
     ArrayList<Model_ListItem> listItems;
     GetList gList;
-    String getListURL = "http://aj3dlab.dothome.co.kr/Test_modelListG_Android.php";
+    String getListURL = "http://hosting.ajplants.com/Plant_modelListG_Android.php";
 
     String id = "";
     // TODO: Rename parameter arguments, choose names that match

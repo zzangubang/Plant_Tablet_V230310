@@ -40,7 +40,7 @@ public class Activity_PhoneRevise extends Activity {
     Toast toast;
 
     SendPhone sPhone;
-    String sendPhoneURL = "http://aj3dlab.dothome.co.kr/Test_sendPhone_Android.php";
+    String sendPhoneURL = "http://hosting.ajplants.com/Plant_sendPhone_Android.php";
     String id = "";
     @Override
     protected void onCreate(Bundle savedInstance) {

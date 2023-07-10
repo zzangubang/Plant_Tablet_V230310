@@ -41,7 +41,7 @@ public class Activity_PassCheck extends Activity {
     Toast toast;
 
     Secession secession;
-    String secessionURL = "http://aj3dlab.dothome.co.kr/Test_secession_Android.php";
+    String secessionURL = "http://hosting.ajplants.com/Plant_secession_Android.php";
     SharedPreferences sharedPreferences; // 로그인 정보 삭제.
     SharedPreferences.Editor editor;
 

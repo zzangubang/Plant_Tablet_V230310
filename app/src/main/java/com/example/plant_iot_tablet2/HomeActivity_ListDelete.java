@@ -38,18 +38,18 @@ public class HomeActivity_ListDelete extends Fragment {
     // 리스트 삭제 버튼.
     ImageView button_delete;
     ModelDelete dModel;
-    String modelDeleteURL = "http://aj3dlab.dothome.co.kr/Test_modelDelete_Android.php";
+    String modelDeleteURL = "http://hosting.ajplants.com/Plant_modelDelete_Android.php";
 
     // ListView.
     ListView list;
     Model_Delete_ListAdapter listAdapter;
     ArrayList<Model_Delete_ListItem> listItems;
     GetList gList;
-    String getListURL = "http://aj3dlab.dothome.co.kr/Test_modelListG_Android.php";
+    String getListURL = "http://hosting.ajplants.com/Plant_modelListG_Android.php";
 
     // 알림.
     SendNoti sNoti;
-    String sendNotiURL = "http://aj3dlab.dothome.co.kr/Test_notiS_Android.php";
+    String sendNotiURL = "http://hosting.ajplants.com/Plant_notiS_Android.php";
 
     String id = "";
     // TODO: Rename parameter arguments, choose names that match

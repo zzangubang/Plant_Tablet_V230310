@@ -57,10 +57,10 @@ public class SignActivity_User extends Fragment {
 
     // 입력한 정보로 등록된 아이디가 있는지 확인.
     GetCheckUser gCheckUser;
-    String getCheckUserURL = "http://aj3dlab.dothome.co.kr/Test_checkUser_Android.php";
+    String getCheckUserURL = "http://hosting.ajplants.com/Plant_checkUser_Android.php";
     // 등록된 아이디가 없을 경우 승인 요청.
     SendSign sSign;
-    String sendSignURL = "http://aj3dlab.dothome.co.kr/Test_sign_Android.php";
+    String sendSignURL = "http://hosting.ajplants.com/Plant_sign_Android.php";
 
     // SignUp_Pass에서 받아온 ID, pass값.
     String id, pass;

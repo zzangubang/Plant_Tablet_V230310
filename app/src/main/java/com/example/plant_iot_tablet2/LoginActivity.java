@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
 
     // 로그인 기능.
     GetLogin gLogin;
-    String getLoginURL = "http://aj3dlab.dothome.co.kr/Test_login_Android.php";
+    String getLoginURL = "http://hosting.ajplants.com/Plant_login_Android.php";
     // 자동 로그인.
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;

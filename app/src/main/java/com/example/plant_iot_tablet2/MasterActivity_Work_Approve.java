@@ -39,7 +39,7 @@ public class MasterActivity_Work_Approve extends Fragment {
     ArrayList<MasterActivity_Work_Approve_ListItem> listItems;
 
     GetList gList;
-    String getListURL = "http://aj3dlab.dothome.co.kr/Test_signListG_Android.php";
+    String getListURL = "http://hosting.ajplants.com/Plant_signListG_Android.php";
 
     public static Context mContext;
 
@@ -189,7 +189,7 @@ public class MasterActivity_Work_Approve extends Fragment {
 
         // 가입 승인 or 거절.
         SignApprove sApprove;
-        String signApproveURL = "http://aj3dlab.dothome.co.kr/Test_signApprove_Android.php";
+        String signApproveURL = "http://hosting.ajplants.com/Plant_signApprove_Android.php";
 
         public MasterActivity_Work_Approve_ListAdapter(Context context, ArrayList<MasterActivity_Work_Approve_ListItem> data) {
             mContext = context;

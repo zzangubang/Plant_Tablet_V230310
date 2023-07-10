@@ -99,7 +99,7 @@ public class MainActivity_GraphTemp extends Fragment {
         else {
             webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         }
-        webView.loadUrl("http://aj3dlab.dothome.co.kr/Plant_tempGraph.php?date="+today+"&model="+model);
+        webView.loadUrl("http://hosting.ajplants.com/Plant_tempGraph.php?date="+today+"&model="+model);
 
 
         return v;

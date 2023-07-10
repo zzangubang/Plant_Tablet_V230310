@@ -49,9 +49,9 @@ public class MainActivity_Work_Data_Illu extends Fragment {
     TableLayout table;
 
     GetDate gDate;
-    String getDateURL = "http://aj3dlab.dothome.co.kr/Test_valueDate_Android.php";
+    String getDateURL = "http://hosting.ajplants.com/Plant_valueDate_Android.php";
     GetValue gValue;
-    String getValueURL = "http://aj3dlab.dothome.co.kr/Test_illuTable_Android.php";
+    String getValueURL = "http://hosting.ajplants.com/Plant_illuTable_Android.php";
 
     ProgressDialog dialog;
     Toast toast;
@@ -130,7 +130,7 @@ public class MainActivity_Work_Data_Illu extends Fragment {
                 String selectDate = year + "-" + monthS + "-" + dayOfMonthS;
 
                 dateT.setText(selectDate);
-                webView.loadUrl("http://aj3dlab.dothome.co.kr/Plant_illuGraph.php?date="+selectDate+"&model="+model);
+                webView.loadUrl("http://hosting.ajplants.com/Plant_illuGraph.php?date="+selectDate+"&model="+model);
                 dialog.show();
                 gValue = new GetValue();
                 gValue.execute(getValueURL, selectDate);
@@ -231,7 +231,7 @@ public class MainActivity_Work_Data_Illu extends Fragment {
                 }
 
                 dateT.setText(date);
-                webView.loadUrl("http://aj3dlab.dothome.co.kr/Plant_illuGraph.php?date="+date+"&model="+model);
+                webView.loadUrl("http://hosting.ajplants.com/Plant_illuGraph.php?date="+date+"&model="+model);
                 gValue = new GetValue();
                 gValue.execute(getValueURL, date);
 

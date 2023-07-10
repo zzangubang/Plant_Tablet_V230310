@@ -55,7 +55,7 @@ public class FindActivity_Pass_Revise extends Fragment {
     TextView editWrong_pass, editWrong_pass2;
 
     SendPass sPass;
-    String sendPassURL = "http://aj3dlab.dothome.co.kr/Test_sendPass_Android.php";
+    String sendPassURL = "http://hosting.ajplants.com/Plant_sendPass_Android.php";
 
     // 계속하기 버튼.
     MaterialButton btn;

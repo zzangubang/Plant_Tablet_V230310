@@ -34,7 +34,7 @@ public class MasterActivity_Work_Device extends Fragment {
     ArrayList<MasterActivity_Work_Device_ListItem> listItems;
 
     GetList gList;
-    String getListURL = "http://aj3dlab.dothome.co.kr/Test_deviceG_Android.php";
+    String getListURL = "http://hosting.ajplants.com/Plant_deviceG_Android.php";
 
     ProgressDialog dialog;
     public static Context mContext;

@@ -35,9 +35,9 @@ public class NotiService extends Service {
     ArrayList<String> modelList, checkNoti;
 
     GetList gList;
-    String getListURL = "http://aj3dlab.dothome.co.kr/Test_modelListG_Android.php";
+    String getListURL = "http://hosting.ajplants.com/Plant_modelListG_Android.php";
     GetValue gValue;
-    String getValueURL = "http://aj3dlab.dothome.co.kr/Plant_value_Android.php";
+    String getValueURL = "http://hosting.ajplants.com/Plant_value_Android.php";
 
     String CHANNEL_ID = "AJPLANTs";
     String CHANNEL_NOTI_ID = "AJPLANTs - level";

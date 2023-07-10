@@ -48,9 +48,9 @@ public class MainActivity_Work_Timer extends Fragment {
     public int ledLWH = 0, ledLWM = 0, ledLSH = 0, ledLSM = 0;
     public int ledRWH = 0, ledRWM = 0, ledRSH = 0, ledRSM = 0;
     GetAuto gAuto;
-    String getAutoURL = "http://aj3dlab.dothome.co.kr/Test_autoG_Android.php";
+    String getAutoURL = "http://hosting.ajplants.com/Plant_autoG_Android.php";
     SendAuto sAuto;
-    String sendAutoURL = "http://aj3dlab.dothome.co.kr/Test_autoS_Android.php";
+    String sendAutoURL = "http://hosting.ajplants.com/Plant_autoS_Android.php";
 
     String model = "";
     ProgressDialog dialog;

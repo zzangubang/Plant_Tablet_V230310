@@ -52,7 +52,7 @@ public class BluetoothActivity extends Activity {
 
     // 등록된 모델인지 체크.
     GetCheckModel gModel;
-    String getCheckModelURL = "http://aj3dlab.dothome.co.kr/Test_checkModel_Android.php";
+    String getCheckModelURL = "http://hosting.ajplants.com/Plant_checkModel_Android.php";
 
     String id = "", purpose = "";
     ProgressDialog dialog;

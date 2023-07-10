@@ -36,14 +36,14 @@ public class HomeActivity_UserMenu extends AppCompatActivity {
     TextView nameT, phoneT;
     ImageView button_edit; // 핸드폰 번호 변경.
     GetUser gUser;
-    String getUserURL = "http://aj3dlab.dothome.co.kr/Test_getUser_Android.php";
+    String getUserURL = "http://hosting.ajplants.com/Plant_getUser_Android.php";
 
     // 로그아웃 버튼.
     Button button_logout;
     SharedPreferences sharedPreferences; // 로그인 정보 삭제.
     SharedPreferences.Editor editor;
     SendNoti sNoti;
-    String sendNotiURL = "http://aj3dlab.dothome.co.kr/Test_notiS_Android.php";
+    String sendNotiURL = "http://hosting.ajplants.com/Plant_notiS_Android.php";
 
     // 메뉴.
     LinearLayout button_pass, button_alarm, button_help, button_secession;

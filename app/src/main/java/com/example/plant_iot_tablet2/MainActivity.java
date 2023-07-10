@@ -54,11 +54,11 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
 
     GetValue gValue;
-    String getValueURL = "http://aj3dlab.dothome.co.kr/Plant_value_Android.php";
+    String getValueURL = "http://hosting.ajplants.com/Plant_value_Android.php";
     SendActive sActive;
-    String sendCommandURL = "http://aj3dlab.dothome.co.kr/Plant_command_Android.php";
+    String sendCommandURL = "http://hosting.ajplants.com/Plant_command_Android.php";
     GetBle gBle;
-    String getBleURL = "http://aj3dlab.dothome.co.kr/Test_bleG_Android.php";
+    String getBleURL = "http://hosting.ajplants.com/Plant_bleG_Android.php";
 
     Toast toast;
     Timer timer;

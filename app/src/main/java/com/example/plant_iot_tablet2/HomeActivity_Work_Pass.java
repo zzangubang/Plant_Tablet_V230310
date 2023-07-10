@@ -44,7 +44,7 @@ public class HomeActivity_Work_Pass extends Fragment {
     Button button_change;
 
     SendPass sPass;
-    String sendPassURL = "http://aj3dlab.dothome.co.kr/Test_sendPass_Android.php";
+    String sendPassURL = "http://hosting.ajplants.com/Plant_sendPass_Android.php";
 
     InputMethodManager imm;
     Toast toast;

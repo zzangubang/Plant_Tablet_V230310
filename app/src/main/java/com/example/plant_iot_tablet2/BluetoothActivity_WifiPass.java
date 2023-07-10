@@ -70,15 +70,15 @@ public class BluetoothActivity_WifiPass extends Activity {
     int connected_checkNum = 0;
 
     SendModel sModel;
-    String sendModelURL = "http://aj3dlab.dothome.co.kr/Test_modelAdd_Android.php";
+    String sendModelURL = "http://hosting.ajplants.com/Plant_modelAdd_Android.php";
     SendBle sBle;
-    String sendBleURL = "http://aj3dlab.dothome.co.kr/Test_bleS_Android.php";
+    String sendBleURL = "http://hosting.ajplants.com/Plant_bleS_Android.php";
     SendAuto sAuto;
-    String sendAutoURL = "http://aj3dlab.dothome.co.kr/Test_autoS_Android.php";
+    String sendAutoURL = "http://hosting.ajplants.com/Plant_autoS_Android.php";
 
     // 알림.
     SendNoti sNoti;
-    String sendNotiURL = "http://aj3dlab.dothome.co.kr/Test_notiS_Android.php";
+    String sendNotiURL = "http://hosting.ajplants.com/Plant_notiS_Android.php";
 
     InputMethodManager imm; // 키보드.
     ProgressDialog connectDialog, changeDialog;

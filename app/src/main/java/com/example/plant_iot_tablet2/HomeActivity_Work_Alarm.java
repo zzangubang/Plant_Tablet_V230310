@@ -31,9 +31,9 @@ public class HomeActivity_Work_Alarm extends Fragment {
     Switch button_noti;
 
     GetNoti gNoti;
-    String getNotiURL = "http://aj3dlab.dothome.co.kr/Test_notiG_Android.php";
+    String getNotiURL = "http://hosting.ajplants.com/Plant_notiG_Android.php";
     SendNoti sNoti;
-    String sendNotiURL = "http://aj3dlab.dothome.co.kr/Test_notiS_Android.php";
+    String sendNotiURL = "http://hosting.ajplants.com/Plant_notiS_Android.php";
 
     ProgressDialog dialog;
     String id = "";

@@ -99,7 +99,7 @@ public class MainActivity_GraphHumi extends Fragment {
         else {
             webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         }
-        webView.loadUrl("http://aj3dlab.dothome.co.kr/Plant_humiGraph.php?date="+today+"&model="+model);
+        webView.loadUrl("http://hosting.ajplants.com/Plant_humiGraph.php?date="+today+"&model="+model);
 
         return v;
     }
