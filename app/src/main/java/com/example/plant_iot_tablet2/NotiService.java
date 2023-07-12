@@ -37,7 +37,7 @@ public class NotiService extends Service {
     GetList gList;
     String getListURL = "http://hosting.ajplants.com/Plant_modelListG_Android.php";
     GetValue gValue;
-    String getValueURL = "http://hosting.ajplants.com/Plant_value_Android.php";
+    String getValueURL = "http://hosting.ajplants.com/Plant_valueU_Android.php";
 
     String CHANNEL_ID = "AJPLANTs";
     String CHANNEL_NOTI_ID = "AJPLANTs - level";

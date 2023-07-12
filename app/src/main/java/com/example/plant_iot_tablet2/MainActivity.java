@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
 
     GetValue gValue;
-    String getValueURL = "http://hosting.ajplants.com/Plant_value_Android.php";
+    String getValueURL = "http://hosting.ajplants.com/Plant_valueU_Android.php";
     SendActive sActive;
     String sendCommandURL = "http://hosting.ajplants.com/Plant_command_Android.php";
     GetBle gBle;

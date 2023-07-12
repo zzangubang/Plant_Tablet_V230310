@@ -75,6 +75,8 @@ public class BluetoothActivity_WifiPass extends Activity {
     String sendBleURL = "http://hosting.ajplants.com/Plant_bleS_Android.php";
     SendAuto sAuto;
     String sendAutoURL = "http://hosting.ajplants.com/Plant_autoS_Android.php";
+    SendValue sValue;
+    String sendValueURL = "http://hosting.ajplants.com/Plant_valueS_Android.php";
 
     // 알림.
     SendNoti sNoti;
@@ -445,9 +447,13 @@ public class BluetoothActivity_WifiPass extends Activity {
                                 sModel = new SendModel();
                                 sModel.execute(sendModelURL, bleName, bleAddress, id);
 
-                                String command = "0.60.0.100.0:00.0:00.0:00.0:00.0:00.0:00";
+                                String commandAuto = "0.60.0.100.0:00.0:00.0:00.0:00.0:00.0:00";
                                 sAuto = new SendAuto();
-                                sAuto.execute(sendAutoURL, bleName, command);
+                                sAuto.execute(sendAutoURL, bleName, commandAuto);
+
+                                String commandValue = "";
+                                sValue = new SendValue();
+                                sValue.execute(sendValueURL, bleName, commandValue);
 
                                 if (id.equals("ahjoo")) { // 관리자.
                                     ((MasterActivity) MasterActivity.mContext).Refresh();
@@ -636,6 +642,65 @@ public class BluetoothActivity_WifiPass extends Activity {
 
     // 자동모드 값 초기화.
     class SendAuto extends AsyncTask<String, Integer, String> {
+        @Override
+        protected String doInBackground(String... params) {
+            StringBuilder jsonHtml = new StringBuilder();
+            String model = (String) params[1];
+            String command = (String) params[2];
+
+            String serverURL = (String) params[0];
+            String postParameters = "model=" + model + "&command=" + command;
+
+            try {
+                URL phpUrl = new URL(params[0]);
+                HttpURLConnection conn = (HttpURLConnection) phpUrl.openConnection();
+
+                if (conn != null) {
+                    conn.setConnectTimeout(10000);
+                    conn.setReadTimeout(5000);
+                    conn.setRequestMethod("POST");
+                    conn.connect();
+
+                    OutputStream outputStream = conn.getOutputStream();
+                    outputStream.write(postParameters.getBytes("UTF-8"));
+                    outputStream.flush();
+                    outputStream.close();
+
+                    if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                        BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
+
+                        while (true) {
+                            String line = br.readLine();
+                            if (line == null)
+                                break;
+                            jsonHtml.append(line + "\n");
+                        }
+                        br.close();
+                    }
+                    conn.disconnect();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return jsonHtml.toString();
+        }
+
+        protected void onPostExecute(String str) {
+            String TAG_JSON = "aj3dlab";
+            try {
+                JSONObject jsonObject = new JSONObject(str);
+                JSONArray jsonArray = jsonObject.getJSONArray(TAG_JSON);
+
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    JSONObject item = jsonArray.getJSONObject(i);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    // P_STATUS 기본값.
+    class SendValue extends AsyncTask<String, Integer, String> {
         @Override
         protected String doInBackground(String... params) {
             StringBuilder jsonHtml = new StringBuilder();

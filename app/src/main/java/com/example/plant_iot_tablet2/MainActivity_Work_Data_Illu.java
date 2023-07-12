@@ -51,7 +51,7 @@ public class MainActivity_Work_Data_Illu extends Fragment {
     GetDate gDate;
     String getDateURL = "http://hosting.ajplants.com/Plant_valueDate_Android.php";
     GetValue gValue;
-    String getValueURL = "http://hosting.ajplants.com/Plant_illuTable_Android.php";
+    String getValueURL = "http://hosting.ajplants.com/Plant_valueTable_Android.php";
 
     ProgressDialog dialog;
     Toast toast;
@@ -300,7 +300,7 @@ public class MainActivity_Work_Data_Illu extends Fragment {
                     JSONObject item = jsonArray.getJSONObject(i);
 
                     time = item.getString("time");
-                    data = item.getString("data");
+                    data = item.getString("illu");
 
                     TableRow tableRow = new TableRow(getContext());
                     tableRow.setLayoutParams(new ViewGroup.LayoutParams(
@@ -318,7 +318,7 @@ public class MainActivity_Work_Data_Illu extends Fragment {
 
                     // 센서 값 넣기.
                     TextView V1textView = new TextView(getContext());
-                    V1textView.setText(String.format("%.2f", Float.valueOf(data)));
+                    V1textView.setText(data);
                     V1textView.setTypeface(typeface);
                     V1textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 13);
                     V1textView.setPadding(2, 2, 2, 2);
