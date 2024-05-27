@@ -2,6 +2,7 @@ package com.example.plant_iot_tablet2;
 
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -310,6 +311,7 @@ public class MainActivity_Work_Data_Temp extends Fragment {
                     TtextView.setText(time);
                     TtextView.setTypeface(typeface);
                     TtextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 13);
+                    TtextView.setTextColor(Color.parseColor("#777777"));
                     TtextView.setPadding(2, 2, 2, 2);
                     TtextView.setGravity(Gravity.CENTER);
                     tableRow.addView(TtextView);
@@ -319,6 +321,7 @@ public class MainActivity_Work_Data_Temp extends Fragment {
                     V1textView.setText(data);
                     V1textView.setTypeface(typeface);
                     V1textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 13);
+                    V1textView.setTextColor(Color.parseColor("#777777"));
                     V1textView.setPadding(2, 2, 2, 2);
                     V1textView.setGravity(Gravity.CENTER);
                     tableRow.addView(V1textView);

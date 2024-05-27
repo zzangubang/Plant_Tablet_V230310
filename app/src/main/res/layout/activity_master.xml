@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/size_5dp"
                 android:fontFamily="@font/main_font"
-                android:text="관리자 모드 - V230308"
+                android:text="관리자 모드 - V230721"
                 android:textColor="#000000"
                 android:textSize="@dimen/size_12dp" />
         </LinearLayout>
