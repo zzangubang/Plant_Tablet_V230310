@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="size_2dp">4px</dimen>
     <dimen name="size_3dp">6px</dimen>
     <dimen name="size_5dp">10px</dimen>
     <dimen name="size_7dp">14px</dimen>
@@ -17,6 +18,7 @@
     <dimen name="size_20dp">40px</dimen>
     <dimen name="size_25dp">50px</dimen>
     <dimen name="size_30dp">60px</dimen>
+    <dimen name="size_33dp">66px</dimen>
     <dimen name="size_35dp">70px</dimen>
     <dimen name="size_40dp">80px</dimen>
     <dimen name="size_45dp">90px</dimen>

@@ -10,7 +10,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#FFFFFF">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -171,33 +172,62 @@
                         android:textSize="@dimen/size_10dp" />
 
                     <RelativeLayout
-                        android:id="@+id/tempLayout"
+                        android:id="@+id/tempUpLayout"
                         android:layout_width="@dimen/size_70dp"
-                        android:layout_height="@dimen/size_70dp"
+                        android:layout_height="@dimen/size_33dp"
+                        android:layout_marginBottom="@dimen/size_2dp"
                         android:background="@drawable/main_value_selector">
 
                         <TextView
-                            android:id="@+id/errTemp"
+                            android:id="@+id/errTempU"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/size_5dp"
-                            android:layout_marginTop="@dimen/size_5dp"
-                            android:layout_marginEnd="@dimen/size_5dp"
-                            android:layout_marginBottom="@dimen/size_5dp"
+                            android:layout_marginLeft="@dimen/size_5dp"
+                            android:layout_marginTop="@dimen/size_3dp"
                             android:fontFamily="@font/main_font"
                             android:text=""
                             android:textColor="#000000"
                             android:textSize="@dimen/size_7dp" />
 
                         <TextView
-                            android:id="@+id/tempValue"
+                            android:id="@+id/tempUpValue"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
                             android:fontFamily="@font/num_font"
                             android:text=""
                             android:textColor="#000000"
-                            android:textSize="@dimen/size_14dp"
+                            android:textSize="@dimen/size_13dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tempDownLayout"
+                        android:layout_width="@dimen/size_70dp"
+                        android:layout_height="@dimen/size_33dp"
+                        android:layout_marginTop="@dimen/size_2dp"
+                        android:background="@drawable/main_value_selector">
+
+                        <TextView
+                            android:id="@+id/errTempD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_5dp"
+                            android:layout_marginTop="@dimen/size_3dp"
+                            android:fontFamily="@font/main_font"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="@dimen/size_7dp" />
+
+                        <TextView
+                            android:id="@+id/tempDownValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/num_font"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="@dimen/size_13dp"
                             android:textStyle="bold" />
                     </RelativeLayout>
                 </LinearLayout>
@@ -218,33 +248,62 @@
                         android:textSize="@dimen/size_10dp" />
 
                     <RelativeLayout
-                        android:id="@+id/humiLayout"
+                        android:id="@+id/humiUpLayout"
                         android:layout_width="@dimen/size_70dp"
-                        android:layout_height="@dimen/size_70dp"
+                        android:layout_height="@dimen/size_33dp"
+                        android:layout_marginBottom="@dimen/size_2dp"
                         android:background="@drawable/main_value_selector">
 
                         <TextView
-                            android:id="@+id/errHumi"
+                            android:id="@+id/errHumiU"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/size_5dp"
-                            android:layout_marginTop="@dimen/size_5dp"
-                            android:layout_marginEnd="@dimen/size_5dp"
-                            android:layout_marginBottom="@dimen/size_5dp"
+                            android:layout_marginLeft="@dimen/size_5dp"
+                            android:layout_marginTop="@dimen/size_3dp"
                             android:fontFamily="@font/main_font"
                             android:text=""
                             android:textColor="#000000"
                             android:textSize="@dimen/size_7dp" />
 
                         <TextView
-                            android:id="@+id/humiValue"
+                            android:id="@+id/humiUpValue"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
                             android:fontFamily="@font/num_font"
                             android:text=""
                             android:textColor="#000000"
-                            android:textSize="@dimen/size_14dp"
+                            android:textSize="@dimen/size_13dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/humiDownLayout"
+                        android:layout_width="@dimen/size_70dp"
+                        android:layout_height="@dimen/size_33dp"
+                        android:layout_marginTop="@dimen/size_2dp"
+                        android:background="@drawable/main_value_selector">
+
+                        <TextView
+                            android:id="@+id/errHumiD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_5dp"
+                            android:layout_marginTop="@dimen/size_3dp"
+                            android:fontFamily="@font/main_font"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="@dimen/size_7dp" />
+
+                        <TextView
+                            android:id="@+id/humiDownValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/num_font"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="@dimen/size_13dp"
                             android:textStyle="bold" />
                     </RelativeLayout>
                 </LinearLayout>
@@ -344,6 +403,7 @@
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/size_5dp"
                         android:layout_weight="8"
+                        android:background="#FFFFFF"
                         app:tabGravity="fill"
                         app:tabIndicatorColor="#84A56C"
                         app:tabIndicatorGravity="bottom"

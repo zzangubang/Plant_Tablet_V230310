@@ -37,9 +37,9 @@ public class MainActivity extends AppCompatActivity {
 
     // 환경 값.
     TextView lastUpdate;
-    RelativeLayout tempLayout, humiLayout, illuLayout;
-    TextView tempValue, humiValue, illuValue, levelValue;
-    TextView errTempT, errHumiT;
+    RelativeLayout tempUpLayout, tempDownLayout, humiUpLayout, humiDownLayout, illuLayout;
+    TextView tempUpValue, tempDownValue, humiUpValue, humiDownValue, illuValue, levelValue;
+    TextView errTempTU, errTempTD, errHumiTU, errHumiTD;
 
     // 제어.
     String fan = "", fanE = "", ledL = "", ledR = "", water = "", pump = "", mode = "";
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
 
     GetValue gValue;
-    String getValueURL = "http://hosting.ajplants.com/Plant_valueU_Android.php";
+    String getValueURL = "http://hosting.ajplants.com/Plant_valueU_Android_upd.php";
     SendActive sActive;
     String sendCommandURL = "http://hosting.ajplants.com/Plant_command_Android.php";
     GetBle gBle;
@@ -95,10 +95,22 @@ public class MainActivity extends AppCompatActivity {
         // 환경 값.
         lastUpdate = (TextView) findViewById(R.id.lastUpdate); // 마지막 업데이트 날짜.
 
-        tempLayout = (RelativeLayout) findViewById(R.id.tempLayout); // 온도. (99.99 == 에러)
-        tempValue = (TextView) findViewById(R.id.tempValue);
-        errTempT = (TextView) findViewById(R.id.errTemp);
-        tempLayout.setOnClickListener(new View.OnClickListener() {
+        tempUpLayout = (RelativeLayout) findViewById(R.id.tempUpLayout); // 온도. (99.99 == 에러)
+        tempUpValue = (TextView) findViewById(R.id.tempUpValue);
+        errTempTU = (TextView) findViewById(R.id.errTempU);
+        tempDownLayout = (RelativeLayout) findViewById(R.id.tempDownLayout);
+        tempDownValue = (TextView) findViewById(R.id.tempDownValue);
+        errTempTD = (TextView) findViewById(R.id.errTempD);
+        tempUpLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity_Work.class);
+                intent.putExtra("model", model);
+                intent.putExtra("work", "data_temp");
+                startActivity(intent);
+            }
+        });
+        tempDownLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity_Work.class);
@@ -108,10 +120,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        humiLayout = (RelativeLayout) findViewById(R.id.humiLayout); // 습도. (0.00 == 에러)
-        humiValue = (TextView) findViewById(R.id.humiValue);
-        errHumiT = (TextView) findViewById(R.id.errHumi);
-        humiLayout.setOnClickListener(new View.OnClickListener() {
+        humiUpLayout = (RelativeLayout) findViewById(R.id.humiUpLayout); // 습도. (0.00 == 에러)
+        humiUpValue = (TextView) findViewById(R.id.humiUpValue);
+        errHumiTU = (TextView) findViewById(R.id.errHumiU);
+        humiDownLayout = (RelativeLayout) findViewById(R.id.humiDownLayout); // 습도. (0.00 == 에러)
+        humiDownValue = (TextView) findViewById(R.id.humiDownValue);
+        errHumiTD = (TextView) findViewById(R.id.errHumiD);
+        humiUpLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity_Work.class);
+                intent.putExtra("model", model);
+                intent.putExtra("work", "data_humi");
+                startActivity(intent);
+            }
+        });
+        humiDownLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity_Work.class);
@@ -445,9 +469,9 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String str) {
             String TAG_JSON = "aj3dlab";
             String date = "", time = "";
-            String tempD = "", humiD = "", illuD = "", levelD = "";
+            String tempUD = "", tempDD = "", humiUD = "", humiDD = "", illuD = "", levelD = "";
             String fanD = "", fanED = "", ledLD = "", ledRD = "", waterD = "", pumpD = "", modeD = "";
-            String errTemp = "", errHumi = "";
+            String errTempU = "", errTempD = "", errHumiU = "", errHumiD = "";
             try {
                 JSONObject jsonObject = new JSONObject(str);
                 JSONArray jsonArray = jsonObject.getJSONArray(TAG_JSON);
@@ -458,8 +482,10 @@ public class MainActivity extends AppCompatActivity {
                     date = item.getString("date");
                     time = item.getString("time");
 
-                    tempD = item.getString("temp");
-                    humiD = item.getString("humi");
+                    tempUD = item.getString("tempUp");
+                    tempDD = item.getString("tempDw");
+                    humiUD = item.getString("humiUp");
+                    humiDD = item.getString("humiDw");
                     illuD = item.getString("illu");
                     levelD = item.getString("level");
 
@@ -471,17 +497,23 @@ public class MainActivity extends AppCompatActivity {
                     pumpD = item.getString("pump");
                     modeD = item.getString("mode").trim();
 
-                    errTemp = item.getString("errTemp");
-                    errHumi = item.getString("errHumi");
+                    errTempU = item.getString("errTempU");
+                    errTempD = item.getString("errTempD");
+                    errHumiU = item.getString("errHumiU");
+                    errHumiD = item.getString("errHumiD");
                 }
 
                 lastUpdate.setText(date + " " + time);
-                errTempT.setText(errTemp);
-                errHumiT.setText(errHumi);
+                errTempTU.setText(errTempU);
+                errTempTD.setText(errTempD);
+                errHumiTU.setText(errHumiU);
+                errHumiTD.setText(errHumiD);
 
                 // 환경 값.
-                tempValue.setText(String.format("%.2f", Float.valueOf(tempD)));
-                humiValue.setText(String.format("%.2f", Float.valueOf(humiD)));
+                tempUpValue.setText(String.format("%.2f", Float.valueOf(tempUD)));
+                tempDownValue.setText(String.format("%.2f", Float.valueOf(tempDD)));
+                humiUpValue.setText(String.format("%.2f", Float.valueOf(humiUD)));
+                humiDownValue.setText(String.format("%.2f", Float.valueOf(humiDD)));
                 illuValue.setText(illuD);
                 if (levelD.equals("FULL")) {
                     levelValue.setText("적절");
